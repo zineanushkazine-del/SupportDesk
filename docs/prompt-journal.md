@@ -53,3 +53,28 @@ must use the requested build and Jest commands.
 **Outcome:** Validation is performed with `npm.cmd run build` and
 `npm.cmd test -- --runInBand`; the CLI is also exercised with the included
 eight-ticket CSV sample.
+Week 2 – Day 5: Querying, API Documentation and Tests
+
+Prompts Used
+
+1. Help me implement pagination, filtering, searching and sorting for the tickets API using Prisma and TypeScript.
+2. Help me add Zod validation for ticket query parameters.
+3. Help me implement GET and POST comments APIs with authentication and role-based access control.
+4. Help me configure Swagger UI and OpenAPI documentation.
+5. Help me write Jest unit tests and Supertest integration tests.
+6. Help me test invalid pagination values and API error responses.
+7. Help me verify the TypeScript build, test results and code coverage.
+
+Outcomes
+
+* Implemented ticket pagination, filtering, searching and sorting.
+* Added query validation using Zod.
+* Implemented comments API with authorization.
+* Configured Swagger documentation.
+* Successfully passed 52 unit tests and 6 integration tests.
+* TypeScript build completed successfully.
+* API services achieved 100% reported test coverage.
+
+Key Learning
+
+Learned API testing, documentation, query validation, pagination and integration testing.
