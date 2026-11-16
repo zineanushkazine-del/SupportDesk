@@ -1,0 +1,9 @@
+title,description,priority
+Cannot sign in,Password reset link expires before use,high
+Billing discrepancy,"Invoice total differs from the quoted plan, including tax",medium
+Page loads slowly,Dashboard takes over 20 seconds to load on weekday mornings,medium
+Email notifications missing,New ticket assignment emails are not arriving,high
+Mobile app crashes,App closes when attaching a photo on an Android phone,high
+Update contact details,Need to change the billing contact email address,low
+Search returns no results,Searching for existing ticket IDs shows an empty page,medium
+Duplicate invoice received,Received two invoice emails for the same monthly charge,low
