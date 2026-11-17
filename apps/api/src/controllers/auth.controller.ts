@@ -2,7 +2,9 @@ import { Request, Response, NextFunction } from "express";
 import {
   registerUser,
   loginUser,
+  getCurrentUser,
 } from "../services/auth.service";
+import { AuthRequest } from "../auth.middleware";
 
 export const register = async (
   req: Request,
@@ -36,6 +38,24 @@ export const login = async (
 
     res.status(200).json({
       data: result,
+      error: null,
+      meta: null,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getMe = async (
+  req: AuthRequest,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const user = await getCurrentUser(req.user!.userId);
+
+    res.status(200).json({
+      data: user,
       error: null,
       meta: null,
     });

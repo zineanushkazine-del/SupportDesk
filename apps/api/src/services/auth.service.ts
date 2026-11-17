@@ -3,9 +3,9 @@ import jwt from "jsonwebtoken";
 import { env } from "../env";
 import {
   findUserByEmail,
+  findUserById,
   createUser,
 } from "../repositories/auth.repository";
-
 export const registerUser = async (
   name: string,
   email: string,
@@ -74,4 +74,13 @@ export const loginUser = async (
     },
     token,
   };
+};
+export const getCurrentUser = async (userId: string) => {
+  const user = await findUserById(userId);
+
+  if (!user) {
+    throw new Error("User not found");
+  }
+
+  return user;
 };
